@@ -1,0 +1,9 @@
+/var/log/netperfmeter/*.log {
+  compress
+  daily
+  dateext
+  dateformat -%Y-%m-%d
+  missingok
+  notifempty
+  rotate 354
+}

@@ -1,0 +1,12 @@
+[Unit]
+Description=netperfmeter server
+After=syslog.target network.target auditd.service
+
+[Service]
+ExecStart=/usr/bin/netperfmeter 15211
+# StandardOutput has too much verbose
+# StandardOutput=file:/var/log/netperfmeter/output.log
+StandardError=file:/var/log/netperfmeter/error.log
+
+[Install]
+WantedBy=multi-user.target
